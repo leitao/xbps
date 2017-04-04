@@ -94,11 +94,11 @@ print_results(struct xbps_handle *xhp, struct search_data *sd)
 }
 
 static int
-search_array_cb(struct xbps_handle *xhp _unused,
+search_array_cb(struct xbps_handle *xhp _unused_attr,
 		xbps_object_t obj,
-		const char *key _unused,
+		const char *key _unused_attr,
 		void *arg,
-		bool *done _unused)
+		bool *done _unused_attr)
 {
 	xbps_object_t obj2;
 	struct search_data *sd = arg;
@@ -210,7 +210,7 @@ search_array_cb(struct xbps_handle *xhp _unused,
 }
 
 static int
-search_repo_cb(struct xbps_repo *repo, void *arg, bool *done _unused)
+search_repo_cb(struct xbps_repo *repo, void *arg, bool *done _unused_attr)
 {
 	xbps_array_t allkeys;
 	struct search_data *sd = arg;

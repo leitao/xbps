@@ -65,7 +65,7 @@ remove_pkg(const char *repodir, const char *file)
 }
 
 static int
-cleaner_cb(struct xbps_handle *xhp, xbps_object_t obj, const char *key _unused, void *arg, bool *done _unused)
+cleaner_cb(struct xbps_handle *xhp, xbps_object_t obj, const char *key _unused_attr, void *arg, bool *done _unused_attr)
 {
 	struct xbps_repo *repo = ((struct xbps_repo **)arg)[0], *stage = ((struct xbps_repo **)arg)[1];
 	const char *binpkg;

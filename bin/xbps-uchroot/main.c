@@ -109,8 +109,8 @@ die(const char *fmt, ...)
 }
 
 static int
-ftw_cb(const char *fpath, const struct stat *sb _unused, int type,
-		struct FTW *ftwbuf _unused)
+ftw_cb(const char *fpath, const struct stat *sb _unused_attr, int type,
+		struct FTW *ftwbuf _unused_attr)
 {
 	int sverrno = 0;
 

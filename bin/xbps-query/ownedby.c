@@ -97,9 +97,9 @@ match_files_by_pattern(xbps_dictionary_t pkg_filesd,
 static int
 ownedby_pkgdb_cb(struct xbps_handle *xhp,
 		xbps_object_t obj,
-		const char *obj_key _unused,
+		const char *obj_key _unused_attr,
 		void *arg,
-		bool *done _unused)
+		bool *done _unused_attr)
 {
 	xbps_dictionary_t pkgmetad;
 	xbps_array_t files_keys;
@@ -129,9 +129,9 @@ ownedby_pkgdb_cb(struct xbps_handle *xhp,
 static int
 repo_match_cb(struct xbps_handle *xhp,
 		xbps_object_t obj,
-		const char *key _unused,
+		const char *key _unused_attr,
 		void *arg,
-		bool *done _unused)
+		bool *done _unused_attr)
 {
 	xbps_dictionary_t filesd;
 	xbps_array_t files_keys;
@@ -163,7 +163,7 @@ repo_match_cb(struct xbps_handle *xhp,
 }
 
 static int
-repo_ownedby_cb(struct xbps_repo *repo, void *arg, bool *done _unused)
+repo_ownedby_cb(struct xbps_repo *repo, void *arg, bool *done _unused_attr)
 {
 	xbps_array_t allkeys;
 	struct ffdata *ffd = arg;
